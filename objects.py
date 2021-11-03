@@ -12,3 +12,10 @@ print(3.13, int(3.14));
 
 firstName = "Brad";
 print(firstName);
+
+# assignment statement
+
+message = "What's up doc?";
+n = 17;
+pi = 3.14;
+print(message);
