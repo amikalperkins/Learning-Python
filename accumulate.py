@@ -1,8 +1,7 @@
-def printnums(x,y):
-    for h in range(y):
-        print("We made it here!")
-        for i in range(x):
-            print("We made it here!")
-    
+count = 0
 
-printnums(5,3)
+while(count < 10):
+    print("Hello")
+    count += 1
+
+print("Done")
