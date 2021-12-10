@@ -1,8 +1,15 @@
-from typing import Iterator
+"""
+for each word in WORDS, add 'd' to the end of the word if 
+the word ends in 'e' to make it past_tense. Otherwise, add
+'ed' to make it past tense.  Save these past_tense words to 
+a list called past_tense
+"""
+words = ["adopt", "bake", "beam", "confide", "grill", "plant", "time", "wave", "wish"]
+past_tense = []
+for word in words:
+    if word[-1] == 'e':
+        past_tense.append(word + 'd')
+    else:
+        past_tense.append(word + 'ed')
 
-
-sum = 0
-
-for iterator in [1, 3, 5, 7, 9]:
-    sum = sum + iterator
-print(sum)
+print(past_tense)
