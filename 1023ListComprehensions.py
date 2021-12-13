@@ -35,4 +35,5 @@
 
 # list type conversion
 xs = list("Crunchy Frog")
-print(xs)
+stringxs = ''.join([str(element) for element in xs])
+print(stringxs)
