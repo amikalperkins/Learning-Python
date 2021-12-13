@@ -26,11 +26,39 @@
 
 # myOtherList.pop(myOtherList.index(True))
 
-def average(listOfNumbers):
-    sum = 0
-    for number in listOfNumbers:
-        sum = sum + number
-    return (sum//len(listOfNumbers))
+# def average(listOfNumbers):
+#     sum = 0
+#     for number in listOfNumbers:
+#         sum = sum + number
+#     return (sum//len(listOfNumbers))
 
-numberList = [1,2,3,4,5,6]
-print(average(numberList))
+# numberList = [1,2,3,4,5,6]
+# print(average(numberList))
+
+# def max(listOfNumbers):
+#     maxValue = listOfNumbers[0]
+#     for number in listOfNumbers:
+#         if number > maxValue:
+#             maxValue = number
+#     return maxValue
+
+# listNumbers = [5000,3,4,5,200,-2,2]
+# print(max(listNumbers))
+
+# def sum_of_squares(xs):
+#     sum = 0
+#     for element in xs:
+#         sum = sum + (element ** 2)
+#     return sum
+# listOfNumbers = [2, 3, 4]
+# print(sum_of_squares(listOfNumbers))
+
+def countOdd(listOfNumbers):
+    count = 0
+    for element in listOfNumbers:
+        if element % 2 == 0:
+            count = count + 1
+    return count
+
+listOMania = [1,2,3, 4, 5, 6, 7]
+print(countOdd(listOMania))
