@@ -51,14 +51,47 @@
 #         sum = sum + (element ** 2)
 #     return sum
 # listOfNumbers = [2, 3, 4]
-# print(sum_of_squares(listOfNumbers))
+# # print(sum_of_squares(listOfNumbers))
 
-def countOdd(listOfNumbers):
-    count = 0
-    for element in listOfNumbers:
-        if element % 2 == 0:
-            count = count + 1
-    return count
+# def countOdd(listOfNumbers):
+#     count = 0
+#     for element in listOfNumbers:
+#         if element % 2 == 0:
+#             count = count + 1
+#     return count
 
-listOMania = [1,2,3, 4, 5, 6, 7]
-print(countOdd(listOMania))
+# listOMania = [1,2,3, 4, 5, 6, 7]
+# print(countOdd(listOMania))
+
+# def count(lst):
+#     newList = []
+#     for element in lst:
+#         if element == 'sam':
+#             newList.append(element)
+#             break
+#         else:
+#             newList.append(element)
+#     return len(newList)
+
+# listy = ['mike', 'sam', 'sara', 'levi', 'brock', 'sam']
+# print(count(listy))
+
+listy = [0,10,45,7,3]
+
+# def reverseList(aList):
+#     newList = []
+#     for element in range(len(aList), 0, -1):
+#         newList.append(element)
+#     return newList
+
+# print(reverseList(listy))
+
+def insert(obj, index, aListy):
+    newList = []
+    for element in range(len(aListy)):
+        if element == index:
+            newList.append(obj)
+        newList.append(aListy[element])
+    return newList
+
+print(insert('cat', 3, listy))
