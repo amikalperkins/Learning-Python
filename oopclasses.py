@@ -11,7 +11,11 @@ def gcd(m,n):
         n = oldm%oldn
     return n
     
-
+def lcm(a, b, c=1):
+    if (a * c) % b !=0:
+        return lcm(a, b, c+1)
+    else:
+        a * c
 
 class Fraction:
 
@@ -28,28 +32,44 @@ class Fraction:
     def show(self):
         print(self.numerator,'/', self.denominator)
 
-    # ovveride built in string method with build in class methods
+    # override built in string method with build in class methods
     def __str__(self):
         return str(self.numerator)+'/'+str(self.denominator)
 
     
-    # ovveride built in __add__ method
+    # override built in __add__ method
     def __add__(self, otherfraction):
 
         newnumerator = (self.numerator * otherfraction.denominator) + (self.denominator * otherfraction.numerator)
         newdenominator = (self.denominator * otherfraction.denominator)
         common = gcd(newnumerator,newdenominator)
         
-        return Fraction(newnumerator, newdenominator)
-
+        return Fraction(newnumerator//common, newdenominator//common)
+    
+    # override __eq__ equality method check
     def __eq__(self, other):
         firstnumerator = self.numerator * other.denominator
         secondnumerator = other.numerator * self.denominator
 
         return firstnumerator == secondnumerator
 
+    def multiply(self, otherfraction):
+        multiplynumerator = self.numerator * otherfraction.numerator
+        multiplydenominator = self.denominator * otherfraction.denominator
+
+        return str(multiplynumerator)+'/'+str(multiplydenominator)
+
+    def subtraction(self, otherfraction):
+        # cross multiply
+        newnumerator = (self.numerator * otherfraction.denominator) - (self.denominator * otherfraction.numerator)
+        newdenominator = (self.denominator * otherfraction.denominator)
+        common = gcd(newnumerator, newdenominator)
+
+        return Fraction(newnumerator//common, newdenominator//common)
 
 myfraction = Fraction(3,4)
+myfraction2 = Fraction(4,5)
 
-myfraction.show()
-print(myfraction)
+
+addFraction = myfraction.subtraction(myfraction2)
+print(addFraction)
